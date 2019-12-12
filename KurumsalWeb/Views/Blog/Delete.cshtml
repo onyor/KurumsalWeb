@@ -1,0 +1,58 @@
+﻿@model KurumsalWeb.Models.Model.Blog
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .a {
+        margin-bottom: 10px;
+    }
+</style>
+<h2>Sil</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.Icerik)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.Icerik)
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </dt>
+
+        <dd class="a">
+            <img src="@Model.ResimURL" width="150" height="100" />
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.KategoriId)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.KategoriId)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

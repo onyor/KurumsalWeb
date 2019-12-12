@@ -1,0 +1,39 @@
+﻿@model KurumsalWeb.Models.Model.Kategori
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Detay</h2>
+<h3>Kategoriyi silmek istediğinize emin misiniz?</h3>
+<style>
+    .a{
+        padding: 10px;
+    }
+</style>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.KategoriAd)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.KategoriAd)
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.KategoriId }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

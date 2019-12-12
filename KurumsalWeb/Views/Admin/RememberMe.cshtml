@@ -1,0 +1,53 @@
+﻿@model KurumsalWeb.Models.Model.Admin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RememberMe</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/Content/AdminLayout/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="/Content/AdminLayout/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="/Content/AdminLayout/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="/Content/AdminLayout/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="/Content/AdminLayout/css/style.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/css/style-responsive.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("RememberMe", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            <form class="login-form">
+                <div class="login-wrap">
+                    <p class="login-img"><i class="icon_lock_alt"></i></p>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="input-group col-md-10">
+                        <input type="email" class="form-control" name="eposta" required placeholder="E Posta Adresiniz" />
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Şifremi Mail Olarak Gönder" class="btn btn-primary" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <a href="/yönetimpaneli/giris/">Yönetim Paneli Giriş</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    }
+</body>
+</html>

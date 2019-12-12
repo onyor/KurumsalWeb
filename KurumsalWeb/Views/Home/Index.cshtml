@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    ViewBag.Title = "Anasayfa";
+}
+
+<section id="featured">
+    <!-- start slider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Slider -->
+                @{
+                    Html.RenderAction("SliderPartial", "Home");
+                }
+                <!-- end slider -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="solidline">
+                </div>
+            </div>
+        </div>
+        <!-- end divider -->
+        <!-- Portfolio Projects -->
+        @{ 
+            Html.RenderAction("HizmetPartial", "Home");
+        }
+    </div>
+</section>

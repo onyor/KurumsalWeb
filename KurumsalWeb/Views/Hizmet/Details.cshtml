@@ -1,0 +1,45 @@
+﻿@model KurumsalWeb.Models.Model.Hizmet
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .a {
+        padding: 10px;
+    }
+</style>
+
+<div>
+    <h4>Hizmet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+
+        <dd class="a">
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd class="a">
+            @Html.Raw(Model.Aciklama)
+        </dd>
+
+        <dt class="a">
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </dt>
+           
+        <dd class="a">
+            <img src="@Model.ResimURL" width="150" height="150"/>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Güncelle", "Edit", new { id = Model.HizmetId }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

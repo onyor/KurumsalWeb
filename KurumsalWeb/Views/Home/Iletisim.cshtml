@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+<section id="content">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.5777487851749!2d32.71445382924816!3d39.956799026709376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d337d77e7cc74b%3A0x98e20c905dd66c7c!2sErgazi%2C%20Demir%20-%C3%96z%20Sitesi%20No%3A20%2C%2006370%20Ostim%20Organize%20Sanayi%20B%C3%B6lgesi%2FYenimahalle%2FAnkara!5e0!3m2!1str!2str!4v1575810513597!5m2!1str!2str" width="100%" height="380" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-2">
+                <h4> <strong> İletişim </strong></h4>
+
+                <div class="alert alert-info">@ViewBag.Uyari</div>
+                <form action="/Home/Iletisim/" method="post" role="form" class="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="AdSoyad" class="form-control" id="name" placeholder="İsminiz" data-rule="minlen:4" required data-msg="Lütfen en az 4 karakter giriniz" />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Email" id="email" placeholder="E Mailiniz" data-rule="email" required data-msg="Mail adresiniz" />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Konu" id="subject" placeholder="Konu" data-rule="minlen:4" required data-msg="Lütfen en az 8 karakter giriniz" />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="Mesaj" rows="5" data-rule="required" data-msg="ABCD" placeholder="Mesaj"></textarea>
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="text-center"><button type="submit" class="btn btn-theme">GÖNDER</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
