@@ -14,7 +14,7 @@ namespace KurumsalWeb.Models.Model
         [Key]
         public int HizmetId { get; set; }
 
-        [Required,StringLength(150, ErrorMessage ="150 Karakter Olmadılır.")]
+        [Required,StringLength(150, ErrorMessage = "150 Karakter Olmalıdır.")]
         [DisplayName("Hizmet Başlık")]
         public string Baslik { get; set; }
 

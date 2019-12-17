@@ -13,7 +13,7 @@ namespace KurumsalWeb.Models.Model
         [Key]
         public int KategoriId { get; set; }
 
-        [Required,StringLength(50, ErrorMessage ="50 Karakter Olmalıdır.")]
+        [Required,StringLength(50, ErrorMessage = "50 Karakter Olmalıdır.")]
         public string KategoriAd { get; set; }
 
         public string Aciklama { get; set; }

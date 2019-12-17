@@ -13,13 +13,22 @@ namespace KurumsalWeb.Models.Model
     {
         [Key]
         public int YorumId { get; set; }
+
         [Required, StringLength(50,ErrorMessage ="50 Karakter Olmalıdır.")]
+        [DisplayName("Ad Soyad")]
+
         public string AdSoyad { get; set; }
+        [DisplayName("E Posta")]
+
         public string Eposta { get; set; }
         [DisplayName("Yorumunuz")]
+
         public string Icerik { get; set; }
+
         public bool Onay { get; set; }
+
         public Blog Blog { get; set; }   // Bu yorym hangi blog kaydına ait!
+
         public int? BlogId { get; set; }
     }
 }

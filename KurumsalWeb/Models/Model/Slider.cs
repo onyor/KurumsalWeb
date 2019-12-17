@@ -13,11 +13,14 @@ namespace KurumsalWeb.Models.Model
     {
         [Key]
         public int SliderId { get; set; }
-        [DisplayName("Slider Başlık"),StringLength(30,ErrorMessage ="30 karakter olmalıdır.")]
+
+        [DisplayName("Slider Başlık"),StringLength(30,ErrorMessage ="30 Karakter Olmalıdır.")]
         public string Baslik { get; set; }
-        [DisplayName("Slider Açıklama"), StringLength(150, ErrorMessage = "150 karakter olmalıdır.")]
+
+        [DisplayName("Slider Açıklama"), StringLength(150, ErrorMessage = "150 Karakter Olmalıdır.")]
         public string Aciklama { get; set; }
-        [DisplayName("Slider Resim"), StringLength(250, ErrorMessage = "250 karakter olmalıdır.")]
+
+        [DisplayName("Slider Resim"), StringLength(250, ErrorMessage = "250 Karakter Olmalıdır.")]
         public string ResimURL { get; set; }
     }
 }
